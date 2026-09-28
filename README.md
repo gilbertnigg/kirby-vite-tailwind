@@ -18,6 +18,25 @@ Install the PHP dependencies from the project directory:
 composer install
 ```
 
+## Environment configuration
+
+Create the local environment configuration from the tracked example:
+
+```bash
+cp site/config/env.example.php site/config/env.php
+```
+
+Replace the placeholder values for `content.salt` and `cookie.key` with two
+different random values. You can generate each value with:
+
+```bash
+openssl rand -hex 32
+```
+
+Kirby automatically loads `env.php` after the shared `config.php`, so local
+values override the shared configuration. The local `env.php` is ignored by
+Git and must not be committed.
+
 ## Local domain with Laravel Herd
 
 ComposerKit uses `public/` as its public document root.
