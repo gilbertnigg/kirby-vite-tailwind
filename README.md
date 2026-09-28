@@ -37,6 +37,21 @@ Kirby automatically loads `env.php` after the shared `config.php`, so local
 values override the shared configuration. The local `env.php` is ignored by
 Git and must not be committed.
 
+## Initial content
+
+Content is not included in Git. Create the initial site, home page, and error
+page from the project directory after cloning:
+
+```bash
+mkdir -p data/storage/content/home data/storage/content/error
+printf 'Title: My Kirby Site\n' > data/storage/content/site.txt
+printf 'Title: Home\n' > data/storage/content/home/home.txt
+printf 'Title: Error\n' > data/storage/content/error/error.txt
+```
+
+Replace the example titles with the titles for your project. Keep
+`data/storage/content/` writable so Kirby can save changes from the Panel.
+
 ## Local domain with Laravel Herd
 
 ComposerKit uses `public/` as its public document root.

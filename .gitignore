@@ -38,6 +38,11 @@ Icon
 /data/storage/accounts/*
 !/data/storage/accounts/.gitkeep
 
+# Content
+# ---------------
+
+/data/storage/content/
+
 # Runtime Files
 # ---------------
 
