@@ -8,6 +8,7 @@ Kirby `6.0.0-alpha.3`.
 
 - PHP 8.3, 8.4, or 8.5
 - Composer
+- Node.js `^20.19.0` or `>=22.12.0`
 - Laravel Herd (recommended)
 - Node.js and npm
 
