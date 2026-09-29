@@ -1,0 +1,12 @@
+# Public pages may be crawled by search engines.
+User-agent: *
+Allow: /
+
+# The Kirby Panel, API, Panel assets, and direct index.php access
+# should not be crawled.
+Disallow: /panel/
+Disallow: /api/
+Disallow: /index.php
+Disallow: /media/panel/
+
+# robots.txt is not access protection.

@@ -1,6 +1,10 @@
 # Kirby .htaccess
 # revision 2023-07-22
 
+# Additional Apache hardening: prevent directory listings when no index file is present.
+# This is independent of Kirby routing.
+Options -Indexes
+
 # rewrite rules
 <IfModule mod_rewrite.c>
 
@@ -24,7 +28,10 @@ RewriteEngine on
 
 # block files and folders beginning with a dot, such as .git
 # except for the .well-known folder, which is used for Let's Encrypt and security.txt
-RewriteRule (^|/)\.(?!well-known\/) index.php [L]
+RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,L]
+
+# block direct access to PHP-like files except the front controller
+RewriteRule ^(?!index\.php$).*\.(?:php[0-9]?|phtml|phar)$ - [NC,F,L]
 
 # make site links work
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -54,5 +61,9 @@ AddOutputFilterByType DEFLATE application/x-javascript
 # (hardens against attacks from malicious file uploads)
 Header set Content-Type "text/plain" "expr=-z %{CONTENT_TYPE}"
 Header set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), geolocation=(), microphone=(), payment=(), usb=()"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
 
 </IfModule>
