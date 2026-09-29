@@ -1,29 +1,28 @@
 {
-  "name": "getkirby/composerkit",
-  "description": "Kirby Composerkit",
+  "name": "gilbertnigg/kirby-vite-tailwind",
+  "description": "Kirby 6 boilerplate with Vite",
   "type": "project",
   "keywords": [
     "kirby",
-    "cms",
-    "composerkit"
+    "kirby6",
+    "vite"
   ],
   "license": "MIT",
   "authors": [
     {
-      "name": "Kirby Team",
-      "email": "mail@getkirby.com",
-      "homepage": "https://getkirby.com"
+      "name": "Gilbert Nigg",
+      "homepage": "https://www.gilles.ch"
     }
   ],
   "homepage": "https://getkirby.com",
   "support": {
-    "email": "support@getkirby.com",
     "forum": "https://forum.getkirby.com",
     "source": "https://github.com/getkirby/composerkit"
   },
   "require": {
     "php": "~8.3.0 || ~8.4.0 || ~8.5.0",
-    "getkirby/cms": "6.0.0-alpha.3"
+    "getkirby/cms": "6.0.0-alpha.3",
+    "arnoson/kirby-vite": "^5.7"
   },
   "config": {
     "allow-plugins": {

@@ -28,6 +28,23 @@ Icon
 
 /vendor
 
+# Composer-installed Kirby plugins
+# --------------------------------
+
+/site/plugins/kirby-vite
+
+# Frontend dependencies and builds
+# --------------------------------
+
+/node_modules
+/public/assets/build/
+
+# Vite development files
+# ----------------------
+
+/.dev
+/site/config/vite.config.php
+
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
 # -------------SECURITY-------------
@@ -60,3 +77,6 @@ Icon
 # ---------------
 
 /site/config/env.php
+/.env
+/.env.*
+!/.env.example
