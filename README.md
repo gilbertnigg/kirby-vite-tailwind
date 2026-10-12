@@ -24,7 +24,11 @@ Install the frontend dependencies:
 
 ```bash
 npm install
+npm run build
 ```
+
+The initial build is required to open the site without a running Vite development
+server.
 
 ## Frontend assets with Vite
 
