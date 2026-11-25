@@ -1,0 +1,23 @@
+title: Datei
+
+accept:
+  mime: video/mp4
+
+options:
+  changeTemplate: false
+
+fields:
+  description:
+    label:
+      de: Beschreibung
+      en: Description
+    type: text
+    width: 1/2
+  poster:
+    label:
+      de: Vorschaubild
+      en: Poster
+    type: filepicker
+    multiple: false
+    max: 1
+    width: 1/2

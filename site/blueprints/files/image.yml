@@ -1,0 +1,14 @@
+title: Datei
+
+accept:
+  mime: image/jpeg, image/png, image/gif
+
+options:
+  changeTemplate: false
+
+fields:
+  description:
+    label:
+      de: Beschreibung
+      en: Description
+    type: text

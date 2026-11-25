@@ -1,0 +1,28 @@
+title: Editor
+description:
+  de: Inhalte verwalten, ohne Zugriff auf die Benutzerverwaltung oder Systemeinstellungen
+  en: Manage content without access to user management or system settings
+
+permissions:
+  "*": false
+  access:
+    "*": false
+    panel: true
+    site: true
+    account: true
+  site: true
+  pages: true
+  files: true
+  user:
+    "*": false
+    access: true
+    list: true
+    changeEmail: true
+    changeLanguage: true
+    changeName: true
+    changePassword: true
+    update: true
+
+fields:
+  bookmarks:
+    type: pages

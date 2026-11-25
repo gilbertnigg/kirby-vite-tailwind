@@ -1,0 +1,14 @@
+title: Datei
+
+accept:
+  mime: application/zip, application/pdf
+
+options:
+  changeTemplate: false
+
+fields:
+  description:
+    label:
+      de: Beschreibung
+      en: Description
+    type: text
