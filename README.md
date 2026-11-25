@@ -9,8 +9,8 @@ Kirby `6.0.0`.
 - PHP 8.3, 8.4, or 8.5
 - Composer
 - Node.js `^20.19.0` or `>=22.12.0`
+- npm
 - Laravel Herd (recommended)
-- Node.js and npm
 
 ## Installation
 
@@ -35,7 +35,10 @@ server.
 Frontend assets are bundled with Vite through
 [`arnoson/kirby-vite`](https://github.com/arnoson/kirby-vite) and
 `vite-plugin-kirby`. The entries are `src/css/app.css` and `src/js/app.js`.
-Tailwind CSS and legacy browser builds are not configured yet.
+
+The project intentionally uses Tailwind CSS 3 instead of Tailwind CSS 4 to
+retain compatibility with older browsers. Tailwind CSS 4 relies on newer CSS
+features and is designed for modern browsers.
 
 Link or park the project in [Laravel Herd](https://herd.laravel.com) with
 `public/` as the document root, so Kirby is served at
