@@ -2,7 +2,7 @@
 
 This project follows the directory structure of the official
 [Kirby ComposerKit](https://github.com/getkirby/composerkit) and uses
-Kirby `6.0.0-alpha.3`.
+Kirby `6.0.0`.
 
 ## Requirements
 
